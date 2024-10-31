@@ -1,0 +1,61 @@
+# commands executed in the first terminal:
+create user1 u1231231313 100000
+login user1 u1231231313
+search "Los Angeles CA" "Boston MA" 1 1 1
+book 0
+reservations
+quit
+*
+
+# one of two possible outputs in the first terminal:
+Created user user1
+Logged in as user1
+Itinerary 0: 1 flight(s), 299 minutes
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Goodbye
+| 
+
+# second possible output for the first terminal:
+Created user user1
+Logged in as user1
+Itinerary 0: 1 flight(s), 299 minutes
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Booking failed
+No reservations found
+Goodbye
+*
+
+##################### Concurrently executed commands: #####################
+
+# commands that *a separate user* (user2) is executing in a different terminal:
+create user2 sdgfgdd 100000
+login user2 sdgfgdd
+search "Los Angeles CA" "Boston MA" 1 1 1
+book 0
+reservations
+quit
+*
+
+# possible output for second terminal:
+Created user user2
+Logged in as user2
+Itinerary 0: 1 flight(s), 299 minutes
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Booking failed
+No reservations found
+Goodbye
+|
+
+# second possible output for second terminal:
+Created user user2
+Logged in as user2
+Itinerary 0: 1 flight(s), 299 minutes
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Booked flight(s), reservation ID: 1
+Reservation 1 paid: false:
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Goodbye
+*

@@ -1,0 +1,22 @@
+# commands to execute:
+login user1 user1
+create user1 user1 100
+login user1 user1
+login user1 user1
+search "Los Angeles CA" "Boston MA" 1 1 1
+book 0
+book 0
+quit
+*
+
+# expected output:
+Login failed
+Created user user1
+Logged in as user1
+User already logged in
+Itinerary 0: 1 flight(s), 299 minutes
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Booked flight(s), reservation ID: 1
+You cannot book two flights in the same day
+Goodbye
+*

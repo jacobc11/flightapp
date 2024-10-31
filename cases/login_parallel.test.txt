@@ -1,0 +1,41 @@
+# Create one user, then try to login in two different sessions.
+
+# commands:
+login user1 user1
+create user1 fkjnbskdjfksjfn 10000
+login user1 fkjnbskdjfksjfn
+quit
+*
+
+# expected output:
+Login failed
+Created user user1
+Logged in as user1
+Goodbye
+|
+Login failed
+Failed to create user
+Logged in as user1
+Goodbye
+*
+
+##################### Terminal #2: #####################
+
+# commands:
+login user1 user1
+create user1 fkjnbskdjfksjfn 10000
+login user1 fkjnbskdjfksjfn
+quit
+*
+
+# expected output:
+Login failed
+Failed to create user
+Logged in as user1
+Goodbye
+|
+Login failed
+Created user user1
+Logged in as user1
+Goodbye
+*

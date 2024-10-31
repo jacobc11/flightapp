@@ -1,0 +1,28 @@
+# commands to execute:
+create user1 user1 100000
+login user1 user1
+search "Los Angeles CA" "Boston MA" 1 1 7
+quit
+*
+
+# expected output:
+Created user user1
+Logged in as user1
+Itinerary 0: 1 flight(s), 299 minutes
+ID: 465160 Day: 1 Carrier: UA Number: 168 Origin: Los Angeles CA Dest: Boston MA Duration: 299 Capacity: 1 Price: 648
+Itinerary 1: 1 flight(s), 308 minutes
+ID: 1550 Day: 1 Carrier: AA Number: 148 Origin: Los Angeles CA Dest: Boston MA Duration: 308 Capacity: 13 Price: 176
+Itinerary 2: 1 flight(s), 312 minutes
+ID: 464972 Day: 1 Carrier: UA Number: 162 Origin: Los Angeles CA Dest: Boston MA Duration: 312 Capacity: 3 Price: 635
+Itinerary 3: 1 flight(s), 314 minutes
+ID: 2488 Day: 1 Carrier: AA Number: 222 Origin: Los Angeles CA Dest: Boston MA Duration: 314 Capacity: 14 Price: 778
+Itinerary 4: 1 flight(s), 315 minutes
+ID: 651215 Day: 1 Carrier: AA Number: 1360 Origin: Los Angeles CA Dest: Boston MA Duration: 315 Capacity: 2 Price: 231
+Itinerary 5: 1 flight(s), 317 minutes
+ID: 1029264 Day: 1 Carrier: VX Number: 366 Origin: Los Angeles CA Dest: Boston MA Duration: 317 Capacity: 7 Price: 487
+Itinerary 6: 1 flight(s), 321 minutes
+ID: 717952 Day: 1 Carrier: B6 Number: 688 Origin: Los Angeles CA Dest: Boston MA Duration: 321 Capacity: 11 Price: 187
+Goodbye
+*
+
+

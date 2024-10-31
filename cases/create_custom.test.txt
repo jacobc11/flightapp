@@ -1,0 +1,19 @@
+# commands to execute:
+login user1 user1
+create user1 user1 100
+create user2 dfngnfn 34535
+create user3 jhhjkhk 3455322
+create user4 adfgdgd 1231313113
+create user5 asfghhfh 43453535
+quit
+*
+
+# expected output:
+Login failed
+Created user user1
+Created user user2
+Created user user3
+Created user user4
+Created user user5
+Goodbye
+*
